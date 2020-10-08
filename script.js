@@ -95,7 +95,7 @@ function corrige(){
     iniciarEtapa();
     
 }
-async function confirma (){
+function confirma (){
     let etapa=etapas[etapaAtual];
     if(vbranco===true || numero.length===etapa.numeros){
         votacao.push({
