@@ -1,3 +1,4 @@
+//let json=JSON.parse(votacao);
 let seu_voto_para=document.querySelector('.d-1-1 span');
 let cargo=document.querySelector('.d-1-2 span');
 let num=document.querySelector('.d-1-3');
@@ -7,8 +8,10 @@ let fotos= document.querySelector('.d-1-right');
 //VARIÁVEIS DE CONTROLE DE AMBIENTE
 let etapaAtual=0;
 let numero='';
-let vbranco=false
+let vbranco=false;
+let votacao=[];
 function iniciarEtapa(){
+    console.log('inicio');
     let etapa =etapas[etapaAtual];
     numero='';
     vbranco=false;
@@ -92,15 +95,21 @@ function corrige(){
     iniciarEtapa();
     
 }
-function confirma(){
+async function confirma (){
     let etapa=etapas[etapaAtual];
     if(vbranco===true || numero.length===etapa.numeros){
+        votacao.push({
+            etapa:etapas[etapaAtual].titulo,
+            voto: (numero.length===etapa.numeros) ?numero:'branco',
+        });
         etapaAtual++;   
     }
     if(etapas[etapaAtual] !== undefined){
         iniciarEtapa();
     }else{
-        alert('VOTOS REGISTRADOS');
+        document.querySelector('.tela').innerHTML=`<div class="aviso--conclu pisca">FIM</div>`;
+        console.log(votacao);
+
     }
     
 }
