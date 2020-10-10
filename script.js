@@ -5,7 +5,7 @@ let num=document.querySelector('.d-1-3');
 let descricao=document.querySelector('.d-1-4');
 let aviso = document.querySelector('.d-2');
 let fotos= document.querySelector('.d-1-right');
-//VARIÁVEIS DE CONTROLE DE AMBIENTE
+//VARIÁVEIS DE CONTROLE DE AMBIENTE!!!
 let etapaAtual=0;
 let numero='';
 let vbranco=false;
