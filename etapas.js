@@ -1,3 +1,4 @@
+//LISTA COM CANDIDATOS E SUAS RESPECTIVAS FUNÇÕES PARA VOTO
 let etapas = [
     {
         titulo: 'VEREADOR',
